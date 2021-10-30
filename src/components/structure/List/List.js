@@ -1,6 +1,15 @@
 import React, { useState, useEffect } from "react";
 import Card from "../Card/Card";
 import Api from "../../../api/api";
+import styled from "styled-components";
+
+
+const ContainerCard = styled.div` 
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+`
 
 const List = () => {
     const [characters, setCharacters] = useState([]);
@@ -16,11 +25,11 @@ const List = () => {
     };
 
     return (
-        <div className="container-card">
+        <ContainerCard>
             {characters.map((character, index) => (
                 <Card data={character} key={index} />
             ))}
-        </div>
+        </ContainerCard>
     );
 };
 
