@@ -1,12 +1,21 @@
 import React from "react";
-import RickAndMortyLogo from '../../../assets/img/rick-and-morty-logo.png';
+import styled from "styled-components";
+import RickAndMortyLogo from "../../../assets/img/rick-and-morty-logo.png";
+
+const Logo = styled.img`
+  width: 30%;
+`;
+const StyledWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+`;
 
 const Header = () => {
-    return(
-        <div className="header">
-            <img src={RickAndMortyLogo} alt="Rick and Morty logo"/>
-        </div>
-    )
-}
+  return (
+    <StyledWrapper>
+      <Logo src={RickAndMortyLogo} alt="Rick and Morty logo" />
+    </StyledWrapper>
+  );
+};
 
-export default Header
+export default Header;
