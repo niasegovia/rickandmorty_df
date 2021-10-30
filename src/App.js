@@ -1,3 +1,4 @@
+import React from "react";
 import Header from "./components/shared/Header/Header";
 import List from "./components/structure/List/List";
 import styled from "styled-components";
