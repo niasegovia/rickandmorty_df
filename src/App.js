@@ -1,8 +1,10 @@
 import React from "react";
+import { Switch, Route } from "react-router-dom";
 import Header from "./components/shared/Header/Header";
-import List from "./components/structure/List/List";
 import styled from "styled-components";
 import Bg from "../src/assets/img/bg.jpg";
+import Home from "./Pages/Home/Home";
+import ViewCharacter from "./Pages/ViewCharacter/ViewCharacter"
 
 const Background = styled.div`
   background-image: url(${Bg});
@@ -18,7 +20,11 @@ function App() {
     <div className="app">
       <Background>
         <Header />
-        <List />
+        <Switch>
+          <Route path="/" exact={true} component={Home} />
+          <Route path ="/:id" component={ViewCharacter} />
+         </Switch>
+        
       </Background>
     </div>
   );

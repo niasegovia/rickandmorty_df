@@ -1,9 +1,11 @@
 import React from "react";
 import styled from "styled-components";
 import RoundedTag from "../RoundedTag/RoundedTag";
+import { Link } from "react-router-dom";
 
-const StyledContainer = styled.div`
-  background-color: #12a6bd;
+const StyledLink = styled(Link)`
+  text-decoration: none;
+    background-color: #12a6bd;
   width: 210px;
   height: 260px;
   margin: 2%;
@@ -13,8 +15,7 @@ const StyledContainer = styled.div`
   justify-content: space-evenly;
   align-items: center;
   :hover {
-    box-shadow: 0 0 10px #C6DC5D;
-  }
+    box-shadow: 0 0 10px #c6dc5d;
 `;
 
 const Name = styled.h3`
@@ -37,14 +38,18 @@ const Image = styled.img`
   border-radius: 50%;
 `;
 
+
+
 const Card = (props) => {
   const character = props.data;
   return (
-    <StyledContainer>
-      <Image src={`${character.image}`} alt={`${character.name} image`} />
-      <Name>{character.name}</Name>
-      <RoundedTag><Status>{character.status}</Status></RoundedTag>
-    </StyledContainer>
+    <StyledLink to={`/${character.id}`}>
+        <Image src={`${character.image}`} alt={`${character.name} image`} />
+        <Name>{character.name}</Name>
+        <RoundedTag>
+          <Status>{character.status}</Status>
+        </RoundedTag>
+    </StyledLink>
   );
 };
 
