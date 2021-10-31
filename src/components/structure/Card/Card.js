@@ -11,18 +11,21 @@ const StyledContainer = styled.div`
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
+  :hover {
+    box-shadow: 0 0 10px #C6DC5D;
+  }
 `;
 
 const Name = styled.h3`
   color: #f5f9f4;
-  font-family: "Playfair Display";
+  font-family: "Playfair Display", serif;
   font-weight: bold;
   text-transform: uppercase;
   text-align: center;
 `;
 const Status = styled.h5`
   color: #f5f9f4;
-  font-family: "Oxygen";
+  font-family: "Oxygen", sans-serif;
   font-weight: bold;
   text-transform: uppercase;
   text-align: center;
