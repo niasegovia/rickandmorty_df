@@ -24,7 +24,6 @@ function App() {
           <Route path="/" exact={true} component={Home} />
           <Route path ="/:id" component={ViewCharacter} />
          </Switch>
-        
       </Background>
     </div>
   );
