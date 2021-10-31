@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Api from "../../api/api";
 import styled from "styled-components";
 import RoundedTag from "../../components/structure/RoundedTag/RoundedTag";
-/* import { Link } from "react-router-dom"; */
+import { Link } from "react-router-dom";
 
 const StyledContainer = styled.div`
   height: 100vh;
@@ -70,6 +70,26 @@ const Image = styled.img`
   border-radius: 50%;
 `;
 
+const StyledLink = styled(Link)`
+text-decoration: none;
+`
+
+const Button = styled.button`
+text-decoration: none;
+background-color: #c8dd5c;
+border: none;
+color: #12a6bd;
+font-family: "Playfair Display", serif;
+border-radius: 8px;
+padding: 15px 32px;
+text-align: center;
+text-transform: uppercase;
+font-weight: bold;
+:hover {
+    box-shadow: inset 400px 0 0 0 #f5f9f4;
+  }
+`
+
 const CharacterView = (props) => {
   const id = props.match.params.id;
   const [character, setCharacter] = useState({});
@@ -102,9 +122,14 @@ const CharacterView = (props) => {
           <RoundedTag>
             <Status>{character.status}</Status>
           </RoundedTag>
+        <StyledLink to={"/"}>
+            <Button>Voltar</Button>
+        </StyledLink>
       </ContainerInfos>
     </StyledContainer>
   );
 };
 
 export default CharacterView;
+
+
