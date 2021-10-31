@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import RoundedTag from "../RoundedTag/RoundedTag";
 
 const StyledContainer = styled.div`
   background-color: #12a6bd;
@@ -24,11 +25,12 @@ const Name = styled.h3`
   text-align: center;
 `;
 const Status = styled.h5`
-  color: #f5f9f4;
+  color: #12a6bd;
   font-family: "Oxygen", sans-serif;
   font-weight: bold;
   text-transform: uppercase;
   text-align: center;
+  width: 100%;
 `;
 const Image = styled.img`
   width: 80%;
@@ -41,7 +43,7 @@ const Card = (props) => {
     <StyledContainer>
       <Image src={`${character.image}`} alt={`${character.name} image`} />
       <Name>{character.name}</Name>
-      <Status>{character.status}</Status>
+      <RoundedTag><Status>{character.status}</Status></RoundedTag>
     </StyledContainer>
   );
 };
