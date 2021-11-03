@@ -15,13 +15,19 @@ const List = () => {
     const [characters, setCharacters] = useState([]);
 
     useEffect(() => {
-        getCharacters();
+        getCharacters(Api.apiUrl);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
-    const getCharacters = async () => {
-        const response = await Api.fetchGetAll();
+    const getCharacters = async (url) => {
+        const response = await fetch(url);
         const data = await response.json();
-        setCharacters(data.results);
+        setCharacters((_characters) => {
+            return [..._characters, ...data.results];
+        });
+        if (data.info && data.info.next) {
+            getCharacters(data.info.next);
+        }
     };
 
     return (
