@@ -1,8 +1,10 @@
 const Api = {
-    apiUrl: "https://rickandmortyapi.com/api/character",
+    baseUrl: "https://rickandmortyapi.com/api",
+    characterUrl: "https://rickandmortyapi.com/api/character",
+    episodesUrl: "https://rickandmortyapi.com/api/episode",
 
-    fetchGetAll: () => fetch(Api.apiUrl),
-    fetchGetById: id => fetch(`${Api.apiUrl}/${id}`)
+
+    fetchGetById: id => fetch(`${Api.characterUrl}/${id}`)
 }
 
 export default Api;

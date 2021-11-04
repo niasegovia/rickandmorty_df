@@ -12,6 +12,7 @@ const Background = styled.div`
   heigth: 100vh;
   widht: 100vw;
   background-size: cover;
+  background-attachment: fixed;
 `;
 
 
