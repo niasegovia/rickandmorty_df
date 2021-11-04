@@ -15,7 +15,7 @@ const List = () => {
     const [characters, setCharacters] = useState([]);
 
     useEffect(() => {
-        getCharacters(Api.apiUrl);
+        getCharacters(Api.characterUrl);
     // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
