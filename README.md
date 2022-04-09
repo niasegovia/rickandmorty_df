@@ -1,4 +1,4 @@
-<h1 align="center">Desafio Técnico - Vigilantes do sono</h1>
+<h1 align="center">Desafio Técnico</h1>
 
 Projeto Front-End de criação de 2 telas com consulta em uma API de Rick & Morty para o desafio técnico do processo seletivo para a vaga de Engenheiro(a) Fullstack Jr.
 
